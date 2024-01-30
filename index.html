@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">  
+    <title>Directions Route Finder</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link href="custom.scss" rel="stylesheet">
+  </head>
+  <style>
+    #google-map {
+  width:100%;
+  height:400px;
+  margin-top: 10px;
+}
+  </style>
+  <body>
+    <div class="container" >
+        <div class="side-corners" >        
+        </div>
+  
+        <div class="main-box" >
+          <h1 class="display-1 text-center">Directions Route Finder</h1>
+  
+          <div id="address-box" >
+            <div id="origin-box">
+              <label for="origin-add" class="form-control">Source</label>
+              <div class="enter-address-fields">
+                <input type="text" id="origin-add" class="form-control"/> 
+              </div>
+            </div>
+  
+            <div id="destination-box" >
+              <label for="dest-add" class="form-control">Destination</label>
+              <div class="enter-address-fields">
+                <input type="text" id="dest-add" class="form-control"/> 
+              </div>
+            </div>
+          </div>
+  
+          <div id="select-travel-box">
+            
+          </div>
+  
+          <div>
+            <button id="show-route-btn" class="btn btn-primary .mx-auto">Get Directions</button>
+          </div>
+  
+          <div id="show-details-box">
+  
+            
+  
+          </div>
+  
+          <div id="no-route">
+            <div id="no-route-found">No Route Found!</div>
+            <div id="search-again">Try searching again for different addresses.</div>
+          </div>
+  
+
+        <div id="google-map" ></div>
+      </div>
+
+      <div class="side-corners" >
+      </div>
+    </div>
+
+    <script src="App.js"></script>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAmgn_Zj5QaC6BCQQONkwQj_6ajp20YDSg&libraries=places&callback=initMap"></script>
+
+  </body>
+</html>
